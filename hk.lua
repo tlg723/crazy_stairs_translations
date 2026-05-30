@@ -1376,8 +1376,8 @@ module.gui.ranks = {
 		[6] = "你依家唔會觸發 Reaver Rigs.",
 		--Using merge spell will also affect nearby players.
 		[8] = "用鬼合併咒語會影響附近玩家.",
-		--You are now immune to one-way stairs.
-		[9] = "單向樓梯唔會影響你.",
+		--You get a speed boost (25%) when walking on floor mirrors.
+		[9] = "你喺地面鏡行會有多25%移動速度.",
 	},
 	["NECROMANCER"] = {
 		--Create Dual Stairs will ignore cursed intersections and stairs on ghost's platform.
