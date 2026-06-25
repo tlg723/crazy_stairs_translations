@@ -493,7 +493,7 @@ module.spells.names = {
 	["trap"] = "建立陷阱", --Create Trap
 
 	["flipper"] = "反轉者", --Flipper
-	["jokerevent"] = "遮掩事件", --The Cloak
+	["jokerevent"] = "隱藏事件", --The Cloak
 	["jokeraltevent"] = "全面反轉", --Flip Them All
 
 	--WICKED
@@ -612,7 +612,7 @@ module.spells.names = {
 	["revival"] = "重生點", --Revival Point
 	["regen"] = "再生法力點", --Regenerate Mana
 
-	["duality"] = "二元性", --Duality
+	["duality"] = "二元建立", --Duality
 	["necromancerevent"] = "復活事件", --Resurrection
 	["necromanceraltevent"] = "靈魂收穫", --Soul Harvest
 
@@ -620,7 +620,7 @@ module.spells.names = {
 	["createmirrored"] = "建立鏡面樓梯", --Create Mirrored Stairs
 	["bigmirror"] = "大地板鏡面", --Giant Mirror
 	["smallmirror"] = "細地板鏡面", --Small Mirror
-	["outermirror"] = "外面鏡面", --Outer Mirror
+	["outermirror"] = "外圍鏡面", --Outer Mirror
 	["merge"] = "鬼合併", --Reaver Merge
 	["oneway"] = "玻璃化上面樓梯", --Glass Stairs
 
@@ -672,7 +672,7 @@ module.spells.names = {
 	--Gate stairs or platforms
 	["archarchon"] = "建立樓梯傳送門或平台傳送門",
 	--Steal or place
-	["archthief"] = "偷或放樓梯",
+	["archthief"] = "偷走或放走樓梯",
 	--Dual or undead stairs
 	["archnecro"] = "建立雙重樓梯或移除樓梯靈魂",
 	--Escalator or hack-in
@@ -798,7 +798,7 @@ module.spells.descriptions = {
 	--the Wicked Rig. Stairs, once triggered, will destroy automatically. Rank up to Devil to walk on Wicked Rigs without triggering them.
 	["wickedrigevent"] = rig .. "Wicked Rig. 一觸發 Wicked Rig 會自動摧毀樓梯. 等級上升到 DEVIL 去唔觸發 Wicked Rigs.",
 	--Destruction
-	["wickedevent"] = event .. "損壞樓梯" .. event2 .. " 自動重生唔會發生.",
+	["wickedevent"] = event .. "損壞樓梯咒語" .. event2 .. " 自動重生唔會發生.",
 	--Purge
 	--This is an Event spell. It will destroy all the stairs and curses in the game. No exceptions. Regeneration will be triggered.
 	["wickedaltevent"] = "依個係突發事件咒語. 佢會摧毀全部樓梯同全部詛咒交叉點. 一個都唔會留. 自動重生會發生.",
@@ -812,7 +812,7 @@ module.spells.descriptions = {
 	--This spell will rotate stairs in a horizontal fashion, destroying any stairs in the way. After casting, arrows will appear on stairs, prompting you to choose direction. Stairs cannot be rotated outside the game area. Rank up to CONTROLLER to move any un-cursed stairs.
 	["rotate"] = "依個咒語會橫向轉動樓梯, 摧毀任何阻住嘅樓梯. 箭嘴會喺樓梯上面出現, 比你揀轉動方向. 樓梯唔可以出遊戲範圍. 等級上升到 CONTROLLER 去喐任何唔係被詛咒嘅樓梯.",
 	--This spell will move stairs up, destroying any stairs in the way. Stairs cannot be moved above top level. Rank up to CONTROLLER to move any un-cursed stairs.
-	["moveup"] = "依個咒語會向上喐樓梯, 摧毀任何阻住嘅樓梯. 喺頂層嘅樓梯冇得再喐. 等級上升到 CONTROLLER 去喐任何唔係被詛咒嘅樓梯..",
+	["moveup"] = "依個咒語會向上喐樓梯, 摧毀任何阻住嘅樓梯. 喺頂層嘅樓梯冇得再喐. 等級上升到 CONTROLLER 去喐任何唔係被詛咒嘅樓梯.",
 	--This spell fixes any special stairs. If stairs are already normal, this spell will not execute. Rank up to CAPTAIN to cast this spell for free. Rank up to ADMIRAL to be able to fix Cursed Stairs and Cursed Intersections.
 	["movedown"] = "依個咒語恢復任何特殊樓梯. 如果樓梯係普通嘅話, 咒語會冇反應. 等級上升到 CAPTAIN 去免費用依個咒語. 等級上升到 ADMIRAL 去恢復被詛咒嘅樓梯及被詛咒交叉點.",
 	--This spell will move or rotate stairs in random direction, destroying any stairs in the way. Rank up to OPERATOR to avoid stairs going down. Rank up to CONTROLLER to move any un-cursed stairs.
@@ -826,7 +826,7 @@ module.spells.descriptions = {
 	["keeperrigevent"] = rig .. "Keeper Rig. 一觸發 Keeper Rig 會隨機喐樓梯. 等級上升到 OPERATOR 去避免向下喐樓梯. 等級上升到 SENTINEL 去有個選擇去唔觸發 Keeper Rigs.",
 	--Reshuffle
 	--Before executing you can choose soft or forced mode. In soft mode, this spell will move or rotate all normal stairs in random direction, without destroying anything in the process. In forced mode, this spell will move or rotate all stairs in random direction, destroying any staircases in the way.
-	["keeperevent"] = event .. "隨機喐樓梯 " .. event2 .. " 喺你用之前, 你可以選擇心軟模式或者夾硬嚟模式. 喺心軟模式, 依個咒語會隨機喐樓梯, 唔會摧毀任何阻住嘅樓梯. 喺夾硬嚟模式, 依個咒語會隨機喐曬樓梯, 摧毀任何阻住嘅樓梯",
+	["keeperevent"] = event .. "隨機喐樓梯咒語" .. event2 .. " 喺你用之前, 你可以選擇心軟模式或者夾硬嚟模式. 喺心軟模式, 依個咒語會隨機喐樓梯, 唔會摧毀任何阻住嘅樓梯. 喺夾硬嚟模式, 依個咒語會隨機喐曬樓梯, 摧毀任何阻住嘅樓梯",
 	--Restoration
 	--This is an Event spell. It will restore all stairs in the game, including cursed ones. Unlike Purge it will not remove cursed intersections.
 	["keeperaltevent"] = "依個係突發事件咒語. 佢會恢復全部樓梯, 包括被詛咒果啲. 唔似完全清除, 佢唔會整走被詛咒嘅交叉點.",
@@ -855,7 +855,7 @@ module.spells.descriptions = {
 	["spectrerigevent"] = rig .. "Spectre Rig. 一觸發 Spectre Rig 會有50%機會鬼化樓梯. 等級上升到 VISION 去有個選擇去唔觸發 Spectre Rigs.",
 	--Phantom Shuffle
 	--Before executing you can choose soft ghosted or forced ghosted mode. In soft ghosted mode this spell will move or rotate normal stairs in random direction, without destroying anything in the process. In forced ghost mode, this spell will move or rotate all stairs in random direction, destroying any staircases in the way.
-	["spectreevent"] = event .. "鬼化隨機喐樓梯. " .. event2 .. " 喺你用之前, 你可以選擇心軟模式或者夾硬嚟模式. 喺心軟模式, 依個咒語會隨機喐樓梯, 唔會摧毀任何阻住嘅樓梯. 喺夾硬嚟模式, 依個咒語會隨機喐曬樓梯, 摧毀任何阻住嘅樓梯.",
+	["spectreevent"] = event .. "鬼化隨機喐樓梯咒語" .. event2 .. " 喺你用之前, 你可以選擇心軟模式或者夾硬嚟模式. 喺心軟模式, 依個咒語會隨機喐樓梯, 唔會摧毀任何阻住嘅樓梯. 喺夾硬嚟模式, 依個咒語會隨機喐曬樓梯, 摧毀任何阻住嘅樓梯.",
 	--Aether Realm
 	--This is an Event spell. It will ghostify all normal stairs. Rank up to AETHER to walk on ghostified stairs. Ghost Union can also be used to walk on ghostified stairs.
 	["spectrealtevent"] = "依個係突發事件咒語. 佢會鬼化全部普通樓梯. 等級上升到 AETHER 去行上鬼化樓梯. 喺鬼聯盟嘅玩家都可以行上鬼化樓梯.",
@@ -882,9 +882,9 @@ module.spells.descriptions = {
 	--the Hacker Rig. Stairs, once triggered it will teleport player and stairs to a different spot on the same level. Only one player will be teleported. Rank up to REAPER to have an option to walk on Hacker Rigs without triggering them.
 	["hackerrigevent"] = rig .. "Hacker Rig. 一觸發 Hacker Rig 會傳送你同個樓梯去另一個同層嘅地方. 只有一個玩家會被傳送. 等級上升到 REAPER 去有一個選擇去唔觸發 Hacker Rigs.",
 	--Escalation
-	["hackerevent"] = event .. "隨機電梯咒語." ..event2,
+	["hackerevent"] = event .. "隨機電梯咒語" ..event2,
 	--Breach
-	["hackeraltevent"] = event ..  "向上電梯咒語." .. event2,
+	["hackeraltevent"] = event ..  "向上電梯咒語" .. event2,
 	["hackermode"] =  string.format(mode,"Hacker","Hacker Rig","隨機電梯咒語"),
 	["hackerrefill"] = overload,
 	["hackerunion"] =  union,
@@ -908,7 +908,7 @@ module.spells.descriptions = {
 	--the Thief Rig. Stairs once triggered, will steal one Mana from triggering player and add it to your own Mana. You will not receive Mana if your Mana is at maximum. You will also not receive Mana if you change alignment.
 	["thiefrigevent"] = rig .. "Thief Rig. 一觸發 Thief Rig 會喺觸發玩家到偷一個法力點, 然後比你. 如果你滿咗法力點, 你唔會再偷到法力點. 你轉咗 Alignment 都唔會比你偷法力點.",
 	--Flatland
-	["thiefevent"] = event .. "平地樓梯咒語." .. event2,
+	["thiefevent"] = event .. "平地樓梯咒語" .. event2,
 	--Mega Bypass
 	--This is an Event spell. It will create bypass in each inward north and south intersection. If the intersection is cursed, bypass will not be created.
 	["thiefaltevent"] = "依個係突發事件咒語. 佢會向北同南建立繞道. 如果個交叉點係被詛咒, 繞道唔會被建立.",
@@ -937,7 +937,7 @@ module.spells.descriptions = {
 	--StairGate-1
 	["archonevent"] = event .. "隨機樓梯傳送門咒語" .. event2,
 	--Division
-	["archonaltevent"] = event .. "向上樓梯傳送門咒語." .. event2,
+	["archonaltevent"] = event .. "向上樓梯傳送門咒語" .. event2,
 	["archonmode"] = string.format(mode,"Archon","Archon Rig","隨機樓梯傳送門咒語"),
 	["archonrefill"] = overload,
 	["archonunion"] =  union,
@@ -961,7 +961,7 @@ module.spells.descriptions = {
 	--the Drifter Rig. Stairs, once triggered, will spin around in random direction. Rank up to VOYAGER to gain immunity to this rig.
 	["drifterrigevent"] = rig .. "Drifter Rig. 一觸發 Drifter Rig 會180度隨機旋轉樓梯. 等級上升到 VOYAGER 去唔觸發 Drifter Rigs.",
 	--Driftage
-	["drifterevent"] = event .. "隨機漂移咒語." ..  event2,
+	["drifterevent"] = event .. "隨機漂移咒語" ..  event2,
 	--Liftage
 	["drifteraltevent"] = event .. "拎起上面樓梯咒語" .. event2,
 	["driftermode"] = string.format(mode,"Drifter","Drifter Rig","隨機漂移咒語"),
@@ -1015,7 +1015,7 @@ module.spells.descriptions = {
 	--Interweave
 	["splicerevent"] = event .. "隨機扭曲咒語" .. event2,
 	--Bisect
-	["spliceraltevent"] = event .. "向前分開樓梯咒語." .. event2,
+	["spliceraltevent"] = event .. "向前分開樓梯咒語" .. event2,
 	["splicermode"] = string.format(mode,"Splicer","Splicer Rig","隨機扭曲咒語"),
 	["splicerrefill"] = overload,
 	["splicerunion"] = union,
@@ -1496,9 +1496,9 @@ module.gui.settings = {
 	["Interface"] = "介面設定",
 
 	--Show your own avatar billboard
-	["Billboard"] = "顯示你嘅表板",
+	["Billboard"] = "顯示你嘅頭上表板",
 	--Show your overall rank in the avatar billboard
-	["Rank"] = "喺表板顯示你嘅整體等級",
+	["Rank"] = "喺頭上表板顯示你嘅整體等級",
 	--Show the morph animation when using Chameleon ranked up to Deceiver or higher
 	["Morph"] = "喺用 Chameleon (有 Deceiver 或更高的等級) 果陣顯示變身動畫",
 	--Reduce your own mana capacity for an extra challenge
@@ -1970,7 +1970,7 @@ module.gui.gameover.messages = {
 		"等我嚟幫你修復果個樓梯, hehe",
 		"你鍾唔鍾意我嘅傑作? 唔鍾意? 太遲, 我依家先開始.",
 		"醫生叫我去放鬆, 而我就係咁樣放鬆.",
-		"Joker 好記低啲嘢. 我講笑咋, 比返我入馬戲團!",
+		"Joker 好記低啲嘢. 我講笑咋, 比我入返馬戲團!",
 		"個樓梯塔去咗邊?",
 		"Weeeeeeeeeeeeeeeeeeeee!!!!!!!",
 	},
@@ -2251,7 +2251,7 @@ module.static = {
 	--'Banning black magic is like banning fun.'\nour founder's quote
 	["nexus_4"] = "'禁黑魔法就係禁樂趣.'\n我哋嘅創辦人嘅金句",
 
-	["guild_1"] = "THIEF 公會",
+	["guild_1"] = "THIEF 幫會",
 	["guild_2"] = "我哋嘅座右銘:\n\"我借\"\n我用\n我還\n",
 	--PROS:\nMana efficient\nVersatile\nCONS:\nNeeds to steal stairs\nCannot destroy crossing stairs
 	["guild_3"] = "好處:\n唔用太多法力點\n萬能\n壞處:\n需要偷樓梯\n唔可以摧毀阻住嘅樓梯",
@@ -2702,11 +2702,13 @@ module.guide = {
 		"Can be executed on any stairs or on platform's arrow with any adjacent stairs. Rank up to Admiral to restore cursed stairs.",
 		"Can be executed on twisted stairs only or on platform's arrow with adjacent twisted stairs. Rank up to Combiner to restore de-attached stairs from platform.",
 		"Can be executed on normal, rigged or ghosted stairs or on platfrom's arrow with adjacent normal, rigged or ghosted stairs.",
+		"Can be executed on an intersection with normal or rigged opposite stairs. Can be executed on stairs too."
 		]]--
 
 		['restore'] = "可以用喺任何樓梯或者平台上面附近有樓梯嘅箭嘴. 等級上升到 Admiral 去恢復被詛咒嘅樓梯.",
 		['deltwists'] = "只可以用喺已經扭曲咗嘅樓梯或者平台上面附近有扭曲咗嘅樓梯嘅箭嘴. 等級上升到 Combiner 去恢復同平台斷開咗嘅樓梯.",
 		['ghosted'] = "可以用喺普通樓梯, Rig (壟斷樓梯) 或者鬼化咗嘅樓梯或者喺平台上面附近有普通樓梯, Rig (壟斷樓梯) 或者鬼化咗嘅樓梯嘅箭嘴到用.",
+		["flatten"] = "可以用喺對面有普通樓梯或者 Rig (壟斷樓梯) 嘅交叉點. 都可以用喺樓梯到",
 
 		--[[
 		"Patron's Create Stairs (when used on arrows) or Shrink Stairs (when used on stairs)",
@@ -2898,7 +2900,7 @@ module.serverfeedback = {
 	["keeperrig"] = "樓梯喐緊!",
 	["hackerrig"] = "樓梯故障咗!",
 	["jokerrig"] = "樓梯倒轉咗!",
-	["wickedrig"] = "樓梯瓦解緊!",
+	["wickedrig"] = "樓梯冧緊!",
 	["spectrerig"] = "樓梯鬼化咗!",
 	["notspectrerig"] = "樓梯 冇 鬼化到!",
 	["patronrig"] = "你攞到 1 個法力點, 係由 %s 比你!",
@@ -2907,7 +2909,7 @@ module.serverfeedback = {
 	["notthiefrig"] = "%s 唔再係 Thief - 冇偷到法力點.",
 	["leftthiefrig"] = "Thief 離開咗個遊戲 - 冇偷到法力點.",
 	["hereticrig"] = "你被人詛咒!",
-	["archonrig"] = "穿過傳送!",
+	["archonrig"] = "瞬間轉移!",
 	["drifterrig"] = "樓梯轉緊!",
 	["splicerrig"] = "樓梯扭曲緊!",
 	["necrorig"] = "樓梯消失緊!",
@@ -3221,8 +3223,8 @@ module.spells.extras = {
 	["Special"] = "特別要求: %s",
 	["Execution"] = "點執行: %s",
 	["Description"] = "簡介: %s",
-	["basic"] = "基本",
-	["ultimate"] = "超級",
+	["basic"] = "基本咒語",
+	["ultimate"] = "超級咒語",
 	["unlock"] = "0 (3 個去解鎖)",
 	["none"] = "冇特別要求",
 
