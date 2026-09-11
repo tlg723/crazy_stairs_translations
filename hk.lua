@@ -528,7 +528,7 @@ module.spells.names = {
 	["random"] = "隨機傳送", --Random Teleport
 	["vertical"] = "向上傳送", --Vertical Teleport
 
-	["traveller"] = "閃閃傳送", --Shimmering
+	["traveller"] = "快閃傳送", --Shimmering
 	["spectreevent"] = "幻影重新排整", --Phantom Shuffle
 	["spectrealtevent"] = "異世界", --Aether Realm
 
@@ -566,7 +566,7 @@ module.spells.names = {
 
 	["splitter"] = "平台傳送門狂", --Portalmania
 	["archonevent"] = "隨意門●壹", --StairGate-1
-	["archonaltevent"] = "分裂事件", --Division
+	["archonaltevent"] = "上下傳送門", --Division
 
 	--DRIFTER
 	["indrift"] = "空中冲刺", --Surf 
@@ -585,8 +585,8 @@ module.spells.names = {
 	["curse"] = "詛咒樓梯", --Curse Stairs
 	["curseabove"] = "詛咒上面樓梯", --Curse Above Stairs
 	["curseinter"] = "輕彈", --Flicker
-	["autodown"] = "提高分裂下部份樓梯", --Raise Schism
-	["autoup"] = "向下分裂對面上部份樓梯", --Schism Opposite Down
+	["autodown"] = "提高分裂樓梯", --Raise Schism
+	["autoup"] = "向下分裂對面樓梯", --Schism Opposite Down
 
 	["malediction"] = "詛咒建立", --Malediction
 	["hereticevent"] = "分裂事件", --Disunion
@@ -712,12 +712,12 @@ local rig = "依個係 Rig (壟斷) 咒語. 佢會逐個壟斷曬全部普通樓
 
 --Due to different grammar in chinese, all spell-dependent events common string needs to divide into two parts
 --This is an Event spell. It will affect all normal stairs with 
-local event = "依個係突發事件咒語. 佢會用"
-local event2 = "去影響全部普通樓梯."
+local event = "依個係突發事件咒語. 佢會用 "
+local event2 = " 去影響全部普通樓梯."
 --This is a Fill spell. It will create stairs in every empty uncursed intersection in a random direction. 
 local fill = "依個係填滿咒語. 佢會喺吉又冇被詛咒嘅交叉點到隨機方向建立樓梯. " -- do not remove spaces
 --This is a Drone spell. It will change the drone mode to %s. In this mode drones will cast randomly either %s or %s on normal stairs. Special stairs will be restored instead. Outside of limits, drones will create and destroy respectively.
-local mode = "依個係無人機咒語. 佢會將無人機轉做 %s 模式. 無人機喺呢個模式會隨機喺普通樓梯變成 %s 或用%s. 特殊樓梯會被恢復. 否則無人機會分別建立和摧毀."
+local mode = "依個係無人機咒語. 佢會將無人機轉做 %s 模式. 無人機喺呢個模式會隨機喺普通樓梯變成 %s 或用 %s. 特殊樓梯會被恢復. 否則無人機會分別建立和摧毀."
 
 --Due to different grammar in chinese, all string.format(timedExtra) is changed
 --The second %s is the rank, the third %s is the alignment
@@ -783,7 +783,7 @@ module.spells.descriptions = {
 	--This spell destroys stairs. Unlike other spells, it will work on any stairs. Rank up to VILE to cast this spell for free. Rank up to VICIOUS to get 1 Mana everytime you destroy any special stairs. Rank up to ANNIHILATOR to destroy cursed stairs.
 	["destroy"] = "依個咒語會摧毀樓梯. 唔似其他咒語, 依個可以喺任何樓梯都用得. 等級上升到 VILE 去免費用依個咒語. 等級上升到 VICIOUS 去喺你每次摧毀特殊樓梯可以攞1個法力點. 等級上升到 ANNIHILATOR 去摧毀被詛咒樓梯.",
 	--This spell destroys above stairs. Unlike other spells, it will work on any stairs. Rank up to VICIOUS to get 1 Mana everytime you destroy any special stairs. Rank up to ANNIHILATOR to destroy cursed stairs.
-	["destroyabove"] = "依個咒語會摧毀上面樓梯. 唔似其他咒語, 依個可以喺任何樓梯都用得. 等級上升到 VILE 去免費用依個咒語. 等級上升到 VICIOUS 去喺你每次摧毀特殊樓梯可以攞1個法力點. 等級上升到 ANNIHILATOR 去摧毀被詛咒樓梯.",
+	["destroyabove"] = "依個咒語會摧毀上面樓梯. 唔似其他咒語, 依個可以喺任何樓梯都用得. 等級上升到 VICIOUS 去喺你每次摧毀特殊樓梯可以攞1個法力點. 等級上升到 ANNIHILATOR 去摧毀被詛咒樓梯.",
 	--This spell bends stairs up. Use it to gain access to above platform.
 	["bend"] = "依個咒語會向上彎曲樓梯. 用佢嚟行上另一面平台.",
 	--This spell turn above stairs into an obby, by removing most of the steps. Before attempting, remember about jump cooldown. Rank up to DESTROYER to walk on obbies just like on normal stairs.
@@ -954,7 +954,7 @@ module.spells.descriptions = {
 	--This spell will drift below stairs into random orientation, towards a random empty intersection on the same level. Rank up to NOMAD to drift already drifted stairs.
 	["outdrift"] = "依個咒語會隨機漂移下面樓梯去一個同一層又吉嘅交叉點, 又會隨機調整方向. 等級上升到 NOMAD 去再漂移已經漂移咗嘅樓梯.",
 	--This spell will drift above stairs with less randomness and within the same intersection, so that you can walk under and climb them.
-	["driftabove"] = "依個咒語會冇禁隨機漂移上面樓梯又會維持同個位, 比你行過去同爬上去.",
+	["driftabove"] = "依個咒語會冇禁隨機漂移上面樓梯又會維持同一個位, 比你行過去同爬上去.",
 
 	--It allows you to create as many Vertical Elevators as you want for one minute. You can also boost lifts while using this spell, if you are ranked high enough.
 	["riser"] = timed .. "佢會比一分鐘隨你鍾意建立向上升嘅𨋢. 如果你嘅等級夠高嘅話, 你可以用依個咒語上多幾層." .. string.format(timedExtra,RankData.DRIFTER[7].name,RankData.DRIFTER[3].name,"Drifters"), 
@@ -1000,7 +1000,7 @@ module.spells.descriptions = {
 	--This spell will twist stairs in the rotated horizontal direction, connecting them to the neighbouring staircase. If there are no stairs in the chosen destination, they will be created. Rank up to TRANSFORMER to use this spell on already twisted stairs.
 	["twistrotate"] = "依個咒語會轉彎扭曲樓梯, 連接隔離樓梯. 如果揀嘅方向冇樓梯, 佢會自己生成. 等級上升到 TRANSFORMER 去用喺已經扭曲咗嘅樓梯.",
 	--This spell will twist above stairs and likely below stairs too (if they are normal or rigged), so they create 2-level spiral staircase up. Rank up to TRANSFORMER to use this spell on already twisted stairs.
-	["twistup"] = "依個咒語會扭曲上面樓梯, 又有大機會扭曲埋下面樓梯 (如果佢哋係普通樓梯或者 Rig (壟斷樓梯) ), 所以佢會建立一個上兩層嘅螺旋樓梯. 等級上升到 TRANSFORMER 去用喺已經扭曲咗嘅樓梯.",
+	["twistup"] = "依個咒語會扭曲上面樓梯, 又有大機會扭曲埋下面樓梯 (如果佢哋係普通樓梯或者 Rig (壟斷樓梯)), 所以佢會建立一個上兩層嘅螺旋樓梯. 等級上升到 TRANSFORMER 去用喺已經扭曲咗嘅樓梯.",
 	--This spell will restore any twisted stairs. Rank up to COMBINER to cast this spell from platform on disconnected twisted stairs. Rank up to MIXER to cast this spell for free. Rank up to OPTIMUS to gain 1 Mana every time You restore twisted stairs.
 	["canceltwist"] = "依個咒語會恢復任何扭曲咗嘅樓梯. 等級上升到 COMBINER 去可以喺平台上用依個咒語喺斷開咗樓梯. 等級上升到 MIXER 去免費用依個咒語. 等級上升到 OPTIMUS 去每次恢復扭曲咗嘅樓梯攞1個法力點.",
 	--This spell splits stairs into two opposing staircases, allowing you to access all four platforms.
@@ -2826,7 +2826,7 @@ module.serverfeedback = {
 	["blocked"] = "依個交叉點係被人詛咒咗.",
 	["locked"] = "依個樓梯係鎖咗.",
 	["platformlocked"] = "目標平台係鎖咗.",
-	["normalrig"] = "依個咒語只可以用喺普通樓梯或者 Rig (壟斷樓梯) .",
+	["normalrig"] = "依個咒語只可以用喺普通樓梯或者 Rig (壟斷樓梯).",
 	["noway"] = "樓梯阻住咗. (佢有可能係隱形)",
 	["noway2"] = "對面樓梯阻住咗. (佢有可能係隱形)",
 	["noplatform"] = "你揀嘅方向揾唔到有平台.",
@@ -2918,7 +2918,7 @@ module.serverfeedback = {
 	["reveal"] = "你發現隱形樓梯!",
 
 	--drifer lifts
-	["boosted"] = "加強昇降機!",
+	["boosted"] = "加強部𨋢!",
 	["noboost"] = "冇得加強, 上面冇平台.",
 	["noupplatform"] = "冇得加強, 上面冇平台.",
 
@@ -2945,7 +2945,7 @@ module.serverfeedback = {
 	["unlocked"] = "咒語解鎖!",
 
 	--chameleon exceptions	
-	["chamtutorial"] = "你唔可以喺教學用 CHAMELEON !",
+	["chamtutorial"] = "你唔可以喺教學用 CHAMELEON!",
 	["champossessed"] = "你唔可以喺被人詛咒用 CHAMELEON.",
 	["chamhypnotised"] = "你唔可以喺催眠用 CHAMELEON.",
 	["chamreflected"] = "你唔可以喺反射用 CHAMELEON.",
@@ -3262,7 +3262,7 @@ module.gui.mana = {
 	["haven"] = "天堂",
 	["study"] = "學所",
 	["nether"] = "地下城",
-	["guild"] = "公會",
+	["guild"] = "幫會",
 	["nexus"] = "暗會",
 	["oasis"] = "綠洲",
 	["hub"] = "中心",
