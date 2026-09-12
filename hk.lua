@@ -248,8 +248,8 @@ module.gui.stats = {
 	["2124480175"] = "Muggle 邏輯",
 	--Full Circle
 	["2124826874"] = "完整圓圈",
-	--Skipped the Tutorial
-	["2124529966"] = "跳過教學",
+	--None's Nothing
+	["2124529966"] = "None 冇用性",
 	--Possessed Fate
 	["2124826880"] = "被詛咒嘅命運",
 	--Hypnotized Dream
@@ -1888,7 +1888,7 @@ module.gui.gameover.messages = {
 		"扭曲, 分裂, 連接",
 		"千其唔好行一條直線行太耐",
 		"喺你人生增加扭扭曲曲",
-		"其他人嘅混亂就係 Splicer's 秩序",
+		"其他人嘅混亂就係 Splicer 嘅秩序",
 		"我好肯定我可以連接果啲樓梯",
 		"同人連接 - 唔好唔好, 連接樓梯仲好!",
 		"我嘅思想就係咁扭曲",
