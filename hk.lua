@@ -1,4 +1,4 @@
---VERSION 4.3--
+--VERSION 4.4--
 --HONG KONG CANTONESE 香港粵語--
 --I honestly did this bc minecraft did it and i probably wont even be using it
 --Note: Due to different grammar structure, description code is modified
@@ -50,8 +50,8 @@ module.gui.switcher = {
 	--Custom Tower
 	["custom"] = "自訂塔",
 
-	--VR Free Tower
-	["noVR"] = "冇VR塔",
+	--Basic Tower
+	["basic"] = "初級塔",
 	--END NEW
 
 }
@@ -1560,7 +1560,7 @@ module.gui.gameover.results = {
 	--Custom Tower Record
 	["custom"] = "自訂塔紀錄", --this will show in custom tower, but it will always be N/A, as custom tower does not keep records
 	--Classic Tower Record
-	["noVR"] = "普通塔紀錄", --this will show in noVR tower, as they share the same record
+	["basic"] = "初級塔紀錄", --this will show in noVR tower, as they share the same record
 
 	--%s Record
 	["cTime"] = "%s 紀錄", --%s will be replaced by the used class
@@ -2349,6 +2349,9 @@ module.static = {
 	["studio_3"] = "好處:\n可以飛\n唔使用法力點\n壞處:\n要貨金 (Robux)\n唔可以攞到攀爬獎勵",
 	--'Now I rule this staircase!'\nour founder's quote"
 	["studio_4"] = "'我依家係統治呢條樓梯塔果個人!'\n我哋嘅創辦人嘅金句",
+
+	--Architect is not avialable in the Basic Tower.
+	["studio_basic"] = "Architect 唔可以喺初級塔到用",
 	--END NEW
 
 	--SHARED
@@ -2455,36 +2458,7 @@ module.static = {
 module.tutorial = {
 
 	--[[
-	"Welcome to Crazy Stairs!",
-	"First, collect some Mana.",
-	"You can create stairs with this spell.",
-	"All spells need to be executed by jumping.",
-	"Collect this Mana:",
-	"You can flip stairs with this spell.",
-	"Some spells need to be executed on stairs.",
-	"Collect this Mana:",
-	"You can move stairs with this spell.",
-	"Jump on the forward arrow to move stairs.",
-	"You will encounter many blocking stairs in this game.",
-	"Use this spell to destroy blocking stairs.",
-	"You can destroy above stairs, by jumping on below ones.",
-	"Collect this Mana:",
-	"Use this spell to teleport across platforms.",
-	"Jump on arrow to teleport.",
-	"You may find that some stairs are impossible to ascend.",
-	"Use this spell to fix them.",
-	"Restore can be cast either on stairs or on adjacent arrow.",
-	"You need to get to this orb at the top of the staircase to win. Good luck!",
-
-	"Select this spell.",
-
-	"Jump to spawn tutorial",
-	"Collect Mana",
-	"Jump on arrow",
-	"Jump on stairs",
-	"Collect the Orb",
-	]]--
-
+	(old)
 	["tut_big_1"] = "歡迎嚟到瘋狂樓梯 (Crazy Stairs)!",
 	["tut_big_2"] = "首先去攞啲法力點.",
 	["tut_big_3"] = "你可以用依個咒語去建立樓梯.",
@@ -2513,6 +2487,40 @@ module.tutorial = {
 	["tut_small_arrow"] = "喺箭嘴上面跳",
 	["tut_small_stairs"] = "喺樓梯上面跳",
 	["tut_small_pellet"] = "攞終點球",
+	]]--
+
+	["tut_big_1"] = "歡迎嚟到瘋狂樓梯 (Crazy Stairs)!",
+	["tut_big_2"] = "首先學點樣去變身. 喺依嗰變身墊到跳去變做 Patron!",
+	["tut_big_3"] = "Patrons 可以建立樓梯, 但你需要法力點去用咒語. 呢到係一啲法力球比你.",
+	["tut_big_4"] = "你可以用依嗰咒語去建立樓梯. 喺你畫面下低撳相對嘅制.",
+	["tut_big_5"] = "所有咒語都要靠跳去執行.",
+	["tut_big_6"] = "係咪好正呢? 依家變做去 Joker. Jokers 可以反轉樓梯.",
+	["tut_big_7"] = "攞呢個法力球:",
+	["tut_big_8"] = "你可以用依嗰咒語去反轉樓梯.",
+	["tut_big_9"] = "有啲咒語需要喺樓梯上面用.",
+	["tut_big_10"] = "依家變做去 Keeper. Keepers 可以喐樓梯.",
+	["tut_big_11"] = "攞呢個法力球:",
+	["tut_big_12"] = "你可以用依嗰咒語去喐樓梯.",
+	["tut_big_13"] = "喺向前箭嘴到跳去喐樓梯.",
+	["tut_big_14"] = "依家變做去 Wicked. Wickeds 可以摧毀樓梯.",
+	["tut_big_15"] = "你喺依隻遊戲會遇到好多樓梯阻住你.",
+	["tut_big_16"] = "你可以用依嗰咒語去摧毀阻住嘅樓梯.",
+	["tut_big_17"] = "你可以喺下面樓梯跳去摧毀上面樓梯You can destroy above stairs, by jumping on below ones.",
+	["tut_big_18"] = "依家變做去 Hacker. Hackers 可以傳送.",
+	["tut_big_19"] = "攞呢個法力球:",
+	["tut_big_20"] = "用依嗰咒語去傳送到去其他平台.",
+	["tut_big_21"] = "喺箭嘴上面到跳去傳送.",
+	["tut_big_22"] = "你需要喺樓梯塔頂攞呢嗰終點球去嬴. 祝你好運!",
+
+	["tut_select"] = "揀呢嗰咒語.",
+
+	["tut_small_init"] = "喺到跳去開始教學",
+	["tut_small_morph"] = "喺到跳去變身",
+	["tut_small_collect"] = "攞法力球",
+	["tut_small_arrow"] = "喺箭嘴上面到跳",
+	["tut_small_stairs"] = "喺樓梯上面到跳",
+	["tut_small_pellet"] = "攞終點球",
+	
 	--end new
 
 }
@@ -2856,7 +2864,7 @@ module.serverfeedback = {
 	["noghost"] = "依個咒語只可以喺普通樓梯, Rig (壟斷樓梯), 被鬼化嘅樓梯.",
 	["wrongplace"] = "另一個樓梯要喺遊戲範圍內.",
 	["archrace"] = "Architects 唔可以同人比賽!",
-	["noobrace"] = "你唔可喺教學同人比賽!",
+	--["noobrace"] = "你唔可喺教學同人比賽!", deprecated
 	["toolate"] = "有人已經比賽緊, 等一陣再試.",
 	["blockedplit"] = "目標交叉點係被人詛咒.",
 	--END NEW
@@ -2953,10 +2961,12 @@ module.serverfeedback = {
 	["morphpossessed"] = "你唔可以喺被人詛咒轉 Alignment.",
 	["morphhypnotised"] = "你唔可以喺催眠轉 Alignment.",
 	["morphreflected"] = "你唔可以喺反射轉 Alignment.",
+	["bannedclass"] = "%s 唔可以喺初級塔到用",
 
 	["nocode"] = "入咗個代碼先.",
 	["invalid"] = "依個代碼係錯.",
 	["old"] = "依個代碼唔可以再用.",
+	["basic_arch"] = "你唔可以喺初級塔到免費試用 Architect",
 	["accepted"] = "代碼接受.",
 
 	--free demos
@@ -2981,10 +2991,10 @@ module.serverfeedback = {
 	["sent"] = "傳送咗你嘅訊息, 多謝.",
 
 	--NEW
-	['noobteleport'] = "你唔可以喺教學轉樓梯塔!",
-	['noobmorph'] = "完成教學去可以變身!",
-	['noobnocode'] = "完成教學去可以用代碼!",
-	['noobchameleon'] = "完成教學去可以用 Chameleon!",
+	['noobteleport'] = "完成教學去轉樓梯塔!",
+	--['noobmorph'] = "完成教學去可以變身!", deprecated
+	['noobnocode'] = "完成教學去用代碼!",
+	['noobchameleon'] = "完成教學去用 Chameleon!",
 
 	--GIFTING
 	['notingame'] = "果個玩家離開咗遊戲, 你唔可以比個特權證!",
@@ -3084,7 +3094,8 @@ module.localfeedback = {
 	["unlocked"] = "咒語解鎖咗!",
 	["maxmana"] = "你已經滿咗法力點!",
 	["nopurchase"] = "你唔需要喺教學買法力點!",
-	--NEW
+	["notinbasic"] = "唔可以喺初級塔到用特發事件咒語",
+	--NEW 
 	["limitset"] = "你開咗法力點限制 - 阻止咗你去買.", --for refill mana
 	["hasarchitect"] = "你已經有 Architect 特權證!",
 	--END NEW
