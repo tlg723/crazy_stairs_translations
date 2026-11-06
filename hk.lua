@@ -41,7 +41,7 @@ module.gui.switcher = {
 	--Teleport Failed
 	["failed"] = "傳送唔到!",
 
-	--Classic Tower
+	--Normal Tower
 	["classic"] = "普通塔",
 
 	--Pro Tower
@@ -631,10 +631,10 @@ module.spells.names = {
 
 	--GREMLIN
 	["tram"] = "建立電車樓梯", --Create Tram Stairs
-	["screwup"] = "向上螺絲", --Up Corkscrew
+	["screwup"] = "向上隨機發神經樓梯", --Random Above Crazy Stairs
 	["revolve"] = "迴轉樓梯", --Revolve Stairs
 	["trapstairs"] = "陷阱門化樓梯", --Trapdoor Stairs
-	["screwdown"] = "向下螺絲", --Down Corkscrew
+	["screwdown"] = "發神經樓梯", --Crazy Stairs
 	["spinplatform"] = "旋轉平台", --Revolve Platform
 
 	["tramway"] = "電車路", --Tram-way
@@ -650,7 +650,8 @@ module.spells.names = {
 	["trestore"] = "恢復樓梯", --Restore Stairs
 
 	--CHAMELEON
-	["ditch"] = "X形樓梯", --Cross Stairs
+	--["ditch"] = "X形樓梯", --Cross Stairs
+	["cork"] = "螺絲形樓梯", --Corkscrew Stairs
 	["warp"] = "彎曲樓梯", --Warp Stairs
 	["chamdown"] = "向下移動樓梯", --Move Stairs Down
 	["chamdraw"] = "下面吊橋", --Below Drawbridge
@@ -731,12 +732,12 @@ module.spells.descriptions = {
 	["summon"] = "依個咒語會比你喺你揀嘅方向建立樓梯. 如果有阻住嘅樓梯, 佢哋會被摧毀.",
 	--This spell calls the orb on the top level to the chosen platform. Rank up to DEFENDER to reduce the cost to 2 Mana. Rank up to SAVIOUR to double the speed at which the orb will travel to You.
 	["restore"] = "依個咒語會在頂樓叫個終點球去你揀嘅平台. 等級上升到 DEFENDER 去減低法力點用量去2個. 等級上升到 SAVIOUR 去多兩倍移動速度.",
-	--This spell recreates below stairs in the opposite direction. Recreated stairs will be normal regardeless of original stairs type.
-	["split"] = "依個咒語會反方向重建下面樓梯. 重建樓梯永遠係普通.",
+	--This spell recreates below stairs in the opposite direction. Recreated stairs will be normal regardeless of original stairs type. Rank up to PROTECTOR to be able to rebuild any un-cursed stairs.
+	["split"] = "依個咒語會反方向重建下面樓梯. 重建樓梯永遠係普通. 等級上升到 PROTECTOR 去可以重建任何唔係被詛咒嘅樓梯",
 	--This spell shrinks above stairs, allowing you to walk around them.
 	["shrinkabove"] = "依個咒語可以縮細上面樓梯, 比你行上去.",
-	--This spell creates an energy bridge between platforms for 60 seconds. Links are intangible from below. Rank up to the CREATOR rank to extend the time to 120 seconds.
-	["link"] = "依個咒語會在兩個平台之間建立一條能量橋, 維持60秒. 能量橋可以由下面行去上去. 等級上升到 CREATOR 去增加時限到去120秒.",
+	--"This spell creates an energy bridge between platforms for 60 seconds. Links are intangible from below. Rank up to the CREATOR rank to cast Link in any direction.
+	["link"] = "依個咒語會在兩個平台之間建立一條能量橋, 維持60秒. 能量橋可以由下面行去上去. 等級上升到 CREATOR 去可以喺任何方向用能量橋.",
 	--This spell creates portal that will teleport all players one platform up. Portal lasts 60 seconds. Rank up to PROTECTOR to extend the time to 120 seconds.
 	["portal"] = "依個咒語會建立一個傳送門. 傳送門會傳送所有玩家上一層, 維持60秒. 等級上升到 PROTECTOR 去增加時限到去120秒.",
 
@@ -890,21 +891,21 @@ module.spells.descriptions = {
 	["hackerunion"] =  union,
 
 	--THIEF
-	--This spell allows you to steal a below normal or rigged stairs. Either this or steal above is required to cast other basic thief spells. Rank up to HIJACKER to be able to steal any un-cursed stairs. Rank up to OUTLAW to be able to steal 2 staircases at a time.
-	["steal"] = "依個咒語會比你偷下面普通或 Rig (壟斷樓梯) . 你一定要用依個咒語或者偷上面果款先可以用其他其基本咒語. 等級上升到 HIJACKER 去可以偷任何唔係被詛咒嘅樓梯. 等級上升到 OUTLAW 去可以偷2個樓梯.",
-	--This spell allows you to steal an above normal or rigged stairs. Either this or steal below is required to cast other basic thief spells. Rank up to HIJACKER to be able to steal any un-cursed stairs. Rank up to OUTLAW to be able to steal 2 staircases at a time.
-	["stealabove"] = "依個咒語會比你偷上面普通或 Rig (壟斷樓梯) . 你一定要用依個咒語或者偷下面果款先可以用其他其基本咒語. 等級上升到 HIJACKER 去可以偷任何唔係被詛咒嘅樓梯. 等級上升到 OUTLAW 去可以偷2個樓梯.",
-	--This spell allows you to place the stolen stairs back in the chosen direction. However, this will not demolish crossing stairs, so you can only place stairs in an empty intersection.
-	["place"] = "依個咒語會比你放返低你偷嘅樓梯喺你揀嘅方向. 但係, 佢係唔會摧毀阻住嘅樓梯, 你只可以放喺吉嘅交叉點到.",
-	--This spell allows you to create a spiral staircase from stolen stairs. It can only be cast on outer platforms and will last one minute. Rank up to BANDIT for the staircase to last two minutes.
-	["uppass"] = "依個咒語會比你放螺旋樓梯. 你只可以喺外面平台到用, 螺旋樓梯只會維持1分鐘. 等級上升到 BANDIT 去維持多1分鐘 (共2分鐘).",
-	--This spell allows you to create a bent bypass from stolen stairs. It will be created in chosen direction and will last one minute. Rank up to ROBBER for the bypass to last two minutes.
-	["sidepass"] = "依個咒語會比你建立繞道. 佢會喺你揀嘅方向建立繞道, 繞道只會維持1分鐘. 等級上升到 ROBBER 去維持多1分鐘 (共2分鐘).",
+	--This spell allows you to steal a below normal or rigged stairs. Either this or steal above is required to cast other basic thief spells. Rank up to HIJACKER to be able to steal any un-cursed stairs. Rank up BANDIT and OUTLAW to be able to steal 2 and 3 staircases respectively at a time.
+	["steal"] = "依個咒語會比你偷下面普通或 Rig (壟斷樓梯) . 你一定要用依個咒語或者偷上面果款先可以用其他其基本咒語. 等級上升到 HIJACKER 去可以偷任何唔係被詛咒嘅樓梯. 等級上升到 BANDIT 和 OUTLAW 去可以分別偷2同3個樓梯.",
+	--This spell allows you to steal an above normal or rigged stairs. Either this or steal below is required to cast other basic thief spells. Rank up to HIJACKER to be able to steal any un-cursed stairs. Rank up BANDIT and OUTLAW to be able to steal 2 and 3 staircases respectively at a time
+	["stealabove"] = "依個咒語會比你偷上面普通或 Rig (壟斷樓梯) . 你一定要用依個咒語或者偷下面果款先可以用其他其基本咒語. 等級上升到 HIJACKER 去可以偷任何唔係被詛咒嘅樓梯. 等級上升到 BANDIT 和 OUTLAW 去可以分別偷2同3個樓梯.",
+	--This spell allows you to place the stolen stairs back in the chosen direction. However, this will not demolish crossing stairs, so you can only place stairs in an empty intersection. Rank up to ROBBER to place stairs on other normal or rigged stairs, crossing them.
+	["place"] = "依個咒語會比你放返低你偷嘅樓梯喺你揀嘅方向. 但係, 佢係唔會摧毀阻住嘅樓梯, 你只可以放喺吉嘅交叉點到. 等級上升到 ROBBER 可以放喺其他普通樓梯 / 壟斷樓梯, 變成X形樓梯",
+	--This spell allows you to create a spiral staircase from stolen stairs. It can only be cast on outer platforms and will last one minute.
+	["uppass"] = "依個咒語會比你放螺旋樓梯. 你只可以喺外面平台到用, 螺旋樓梯只會維持1分鐘.",
+	--This spell allows you to create a bent bypass from stolen stairs. It will be created in chosen direction and will last one minute.
+	["sidepass"] = "依個咒語會比你建立繞道. 佢會喺你揀嘅方向建立繞道, 繞道只會維持1分鐘.",
 	--This spell allows you to ditch stairs for free. You will need to find an empty intersection though. Ditched stairs are flat.
 	["drop"] = "依個咒語會比你免費丟走樓梯. 但係你首先要揾到一個吉嘅交叉點. 丟走嘅樓梯係平架.",
 
 	--It allows you to cast place stairs spell as many times as you like. Unlike regular place spell, this spell can be cast through crossing stairs, as stairs will be stolen automatically in this mode.
-	["heist"] = timed .. "佢會比一分鐘隨你鍾意放樓梯. 唔似普通放樓梯咒語, 依個咒語可以用喺阻住嘅樓梯, 因為樓梯係會自重被你偷." .. string.format(timedExtra,RankData.THIEF[7].name,RankData.THIEF[3].name,"Thieves"),
+	["heist"] = timed .. "佢會比一分鐘隨你鍾意放樓梯. 唔似普通放樓梯咒語, 依個咒語可以唔使偷樓梯先, 因為樓梯係會自重被你偷." .. string.format(timedExtra,RankData.THIEF[7].name,RankData.THIEF[3].name,"Thieves"),
 	--the Thief Rig. Stairs once triggered, will steal one Mana from triggering player and add it to your own Mana. You will not receive Mana if your Mana is at maximum. You will also not receive Mana if you change alignment.
 	["thiefrigevent"] = rig .. "Thief Rig. 一觸發 Thief Rig 會喺觸發玩家到偷一個法力點, 然後比你. 如果你滿咗法力點, 你唔會再偷到法力點. 你轉咗 Alignment 都唔會比你偷法力點.",
 	--Flatland
@@ -1076,10 +1077,10 @@ module.spells.descriptions = {
 	--GREMLIN
 	--This spell will create Tram Stairs in the chosen direction. Tram stairs have only half the length of the normal stairs, and once created will automatically travel to the target platform. To make stairs travel back, jump on them without a spell equipped. Rank up to FIEND to remotely bring back away Trams from any platform.
 	["tram"] = "依個咒語會喺你揀嘅方向建立電車樓梯. 電車樓梯係得半條普通樓梯長度, 一建立後會自重喐上去個平台到. 要喐返落去, 唔好開住咒語, 上面跳. 等級上升到 FIEND 去喺平台到叫啲電車樓梯返落嚟.",
-	--This spell will turn below stairs into downwards corkscrew. It will be near to impossible to ascend such stairs. Rank up to DAEMON to manually control rotation with a switch. (it may not work when there is another Daemon nearby).
-	["screwdown"] = "依個咒語會將下面樓梯變成向下螺絲. 依種樓梯係接近冇可能爬到上去. 等級上升到 DAEMON 去有一個選擇去手動控制旋轉. (如果附近有另一個 DAEMON, 有機會冇效果).",
-	--This spell will turn above stairs into upwards corkscrew, allowing you to pass. It will be near to impossible to descend such stairs. Rank up to DAEMON to manually control rotation with a switch. (it may not work when there is another Daemon nearby).
-	["screwup"] = "依個咒語會將上面樓梯變成向上螺絲, 比你行過去. 依種樓梯係接近冇可能爬到上去. 等級上升到 DAEMON 去有一個選擇去手動控制旋轉. (如果附近有另一個 DAEMON, 有機會冇效果).",
+	--This spell will turn below stairs into Crazy Stairs. Crazy Stairs will swing around 6 platforms 3 times, and you can choose thie initial rotation. Rank up to DAEMON to remotely bring back Crazy Stairs back to an adjacent platform.
+	["screwdown"] = "依個咒語會將下面樓梯變成發神經樓梯. 發神經樓梯會喺6個平台搖嚟搖去3次, 你可以揀開頭喐嘅方向. 等級上升到 DAEMON 去遠距離帶去附近嘅平台.",
+	--"This spell will turn above stairs into Crazy Stairs. Crazy Stairs will swing around 6 platforms 3 times. The initial rotation will be random. Rank up to DAEMON to remotely bring back Crazy Stairs back to an adjacent platform."
+	["screwup"] = "依個咒語會將上面樓梯變成發神經樓梯. 發神經樓梯會喺6個平台搖嚟搖去3次, 開頭喐嘅方向會係隨機. 等級上升到 DAEMON 去遠距離帶去附近嘅平台.",
 	--This spell will turn below stairs into revolving propeller on a Z axis. You can choose direction of the rotation. Stairs will stop briefly after each 180 turn.
 	["revolve"] = "依個咒語會將下面樓梯變成喺 Z(横) 軸旋轉嘅螺旋槳 (即係打直轉). 你可以選擇旋轉方向. 樓梯每轉完180度會停一陣.",
 	--This spell will turn below stairs into a trap door. Stairs, once triggered, will revolve on X axis, dropping careless players below. Rank up to GOBLIN to detect Gremlin Traps. Rank up to DIABLO to be immune to Gremlin traps.
@@ -1108,8 +1109,13 @@ module.spells.descriptions = {
 	["chamdraw"] = "喺未被廢除果陣, 依個原本係一個 Heretic 咒語. 佢會將下面樓梯變成吊橋, 搞到冇可能向下落除非有人由下面觸發吊橋.",
 	--This used to be a Reaver spell, before it got rejected. This spell will turn below stairs into one-way passage, while merging players with their ghost, if they walk in proper direction. You can choose which direction to block. Rank up to Illusion to be immune to one-way stairs effect. While merged with ghost, you can use floor mirrors but your ghost will not collect Mana for you.
 	["oneways"] = "喺未被廢除果陣, 依個原本係一個 Reaver 咒語. 依個會將下面樓梯變成單向樓梯, 一正確行過鏡面會同隻鬼合併. 你可以揀邊個方向去唔比人行. 等級上升到 ILLUSION 去忽視單向樓梯效果. 喺你同隻鬼合併果陣, 你可以用地板鏡面但你隻鬼唔會幫你攞法力球.",
+	
 	--This used to be a thief spell, before it got rejected. It will turn stairs into a crossed staircase.
-	["ditch"] = "喺未被廢除果陣, 依個原本係一個 Thief 咒語. 佢會將下面樓梯變成X字形樓梯.",
+	--["ditch"] = "喺未被廢除果陣, 依個原本係一個 Thief 咒語. 佢會將下面樓梯變成X字形樓梯.",
+	
+	--This used to be a Gremlin spell, before it got rejected. It will turn stairs into a corkscrew staircase. You can choose the direction of spin, when casting this spell. Old Daemon perk is no longer active.
+	["cork"] = "喺未被廢除果陣, 依個原本係一個 Gremlin 咒語. 佢會將下面樓梯變成螺絲形樓梯. 你可以喺用依個咒語果陣揀旋轉方向.  舊 Daemon 等級嘅功能已停用"
+
 	--This used to be a Heretic spell, before it got rejected. It will turn above stairs into drawbridge, allowing you to pass. Ascend is impossible unless other player activates bridge from above. Old Unbeliever rank is no longer active and auto draw from below is no longer possible.
 	["chamdrawabove"] = "喺未被廢除果陣, 依個原本係一個 Heretic 咒語. 佢會將上面樓梯變成吊橋, 比你行上去. 搞到冇可能向上行除非有人由上面觸發吊橋. 舊 UNBELIEVER 等級嘅功能已停用, 唔會再自動觸發吊橋.",
 	--This used to be a wicked spell, before it got rejected. It will warp stairs back to the platform.
@@ -1236,10 +1242,10 @@ module.gui.ranks = {
 	["next"] = "撳右箭嘴去睇下一個等級要求.",
 
 	["PATRON"] = {
-		--Your links will last twice as long (120s).
-		[4] = "你嘅能量橋會維持兩倍時間 (120秒).",
-		--Your portals will last twice as long (120s).
-		[5] = "你嘅傳送門會維持兩倍時間 (120秒).",
+		--You can now create links in any uncursed direction.
+		[4] = "你可以喺任何唔係被詛咒嘅方向建立能量橋",
+		--You can now rebuild any uncursed stairs
+		[5] = "你可以重新建立任何唔係被詛咒嘅樓梯",
 		--The cost of the Call the Orb spell is reduced to 2 Mana.
 		[6] = "叫終點球咒語嘅法力點用量會減少到去2個法力點.",
 		--If you are out of Mana, jump on a platform to be blessed with 1 Mana.
@@ -1308,16 +1314,16 @@ module.gui.ranks = {
 		[9] = "如果終點球個平台附近致少有一個吉嘅交叉點, 喺頂層用故障樓梯會建立樓梯去個終點球.", 
 	},
 	["THIEF"] = {
-		--Your Bypass will now last twice as long (120s).
-		[4] = "你嘅繞道會維持兩倍時間 (120秒).",
-		--Your Spiral Staircase will now last twice as long (120s).
-		[5] = "你嘅螺旋樓梯會維持兩倍時間 (120秒).",
+		--You can now cast Place Stairs on any normal or rigged stairs as well as platforms.
+		[4] = "你依家可以喺任何普通樓梯 / 壟斷樓梯同平台到用放走樓梯咒語.",
+		--You can now keep 2 stolen stairs at the same time.
+		[5] = "你依家可以同時間保持2條樓梯.",
 		--You can now steal any un-cursed stairs.
 		[6] = "你可以偷走任何唔係被詛咒嘅樓梯.",
 		--If you are out of Mana, jump on a platform to get 1 Mana from your stash.
 		[8] = "如果你冇曬法力點, 喺平台上面跳去攞一個法力點.", 
-		--You can now keep 2 stolen stairs at the same time.
-		[9] = "你依家可以同時間保持兩條樓梯.",
+		--You can now keep 3 stolen stairs at the same time.
+		[9] = "你依家可以同時間保持3條樓梯.",
 	},
 	["ARCHON"] = {
 		--You can now cast the Destroy Gate spell on platforms, to remove Platform Gates.
@@ -1400,8 +1406,8 @@ module.gui.ranks = {
 		[6] = "你依家唔會觸發 Gremlin Rigs.",
 		--You are now immune to Gremlin Traps.
 		[8] = "你依家唔會觸發 Gremlin 陷阱.",
-		--You can now control Corkscrew Stairs via a toggle. This may not work if there is another Daemon nearby.
-		[9] = "你可以用一個制去控制螺絲樓梯. 如果附近有另一個 Daemon, 有機會冇效果.",
+		--You can now jump on platform to call and restore all adjacent Crazy Stairs.
+		[9] = "你可以喺平台上面跳去叫同複復原所有周圍嘅發神經樓梯.",
 	},
 	["MUGGLE"] = { 
 		--Your jump cooldown is reduced by 0.125s.
@@ -1512,8 +1518,8 @@ module.gui.settings = {
 	["AChoices"] = "喺用傳送門咒語果陣顯示方向選擇比 Archon",
 	--Show direction selection for Splicer, when using splice spells
 	["SChoices"] = "喺用扭曲咒語果陣顯示方向選擇比 Splicer",
-	--Show direction selection for Gremlin, when using the revolve platform spell
-	["GChoices"] = "喺用旋轉平台咒語果陣顯示方向選擇比 Gremlin",
+	--Show direction selection for Gremlin, when using the revolve platform spell and the crazy stairs spell
+	["GChoices"] = "喺用旋轉平台咒語或發神經樓梯咒語果陣顯示方向選擇比 Gremlin",
 	--new
 	--Show direction selection for Chameleon, when using the One-Way Stairs spell
 	["CChoices"] = "喺用單向樓梯咒語果陣顯示方向選擇比 Chameleon",
@@ -2099,8 +2105,8 @@ module.gui.gameover.credits = {
 module.static = {
 
 	--[[
+	"BASIC TOWER",
 	"How do I play?",
-	"First, it is highly recommended to complete the tutorial. If you haven't done so, please rejoin the game, as the experience could get really confusing otherwise.",
 	"The goal of the game is to reach the top and collect the floating Energy Orb. First choose your alignment (class) by jumping on the glowing pads in the middle of the map.",
 	"Once happy with the choice, collect floating shapes to refill Mana and climb the stairs. Use your class spell to help you with the climb.",
 	"How do I cast spells?",
@@ -2113,18 +2119,44 @@ module.static = {
 	"Some ultimate spells are timed, and do not require execution. Please read more info in the Alignment Guilds to learn more about an ultimate spell, before casting. Cancelling a timed spell will not refund tokens",
 	]]--
 
-	["cla_1"] = "點樣玩?",
-	["cla_2"] = "首先, 強烈建議你玩咗個教學先. 如果你未嘅話, 唔該你重新入個遊戲, 如果唔係隻遊戲會好亂.",
-	["cla_3"] = "遊戲目標就係上到最頂同攞到漂浮緊嘅能量球. 你可以先喺地圖中間啲發光板上面跳去揀 Alignment (級別).",
-	["cla_4"] = "揀完之後, 攞漂浮緊嘅立體去補充法力點同爬個樓梯塔. 用你啲咒語去幫你爬.",
-	["cla_5"] = "點樣用咒語?",
-	["cla_6"] = "所有咒語都會用某過數法力點先可以用. 當你有足夠法力點, 撳個咒語. 你隻手會開始發光, 代表住你開咗個咒語.",
-	["cla_7"] = "開咗之後, 你仲要用佢先得. 所有咒語係靠跳去用. 睇你用咩咒語, 你一係要喺平台, 一係要喺樓梯上面跳先用到咒語. 會有指導箭嘴去幫你去用.",
-	["cla_8"] = "當你爬完之後, 你會攞到3個咒語代幣, 比你去開一個咒語. 再爬多幾次去開多啲咒語. 你唔可以用喺其他級別到用其他級別嘅代幣.",
-	["cla_9"] = "點樣用超級咒語?",
-	["cla_10"] = "你首先要開曬所有基本咒語先可以用超級咒語. 你唔使解開超級咒語, 但佢哋要用代幣 (唔係法力點) 先用到.",
-	["cla_11"] = "爬多幾次去開曬所有基本咒語. 你可以靠比賽去攞多啲代幣. 你又可以買代幣. 你一開曬所有基本咒語, 撳最左手邊嘅制或撳 'C'",
-	["cla_12"] = "有啲超級咒語係計時, 同唔使跳去用. 喺用之前, 你可以喺 Alignment 公會到睇超級咒語嘅資訊. 取消一個計時咒語係唔會比返啲代幣比你",
+	["bas_1"] = "初級塔",
+	["bas_2"] = "點樣玩?",
+	["bas_3"] = "遊戲目標就係上到最頂同攞到漂浮緊嘅能量球. 你可以先喺地圖中間啲發光板上面跳去揀 Alignment (級別).",
+	["bas_4"] = "揀完之後, 攞漂浮緊嘅立體去補充法力點同爬個樓梯塔. 用你啲咒語去幫你爬.",
+	["bas_5"] = "點樣用咒語?",
+	["bas_6"] = "所有咒語都會用某過數法力點先可以用. 當你有足夠法力點, 撳個咒語. 你隻手會開始發光, 代表住你開咗個咒語.",
+	["bas_7"] = "開咗之後, 你仲要用佢先得. 所有咒語係靠跳去用. 睇你用咩咒語, 你一係要喺平台, 一係要喺樓梯上面跳先用到咒語. 會有指導箭嘴去幫你去用.",
+	["bas_8"] = "當你爬完之後, 你會攞到3個咒語代幣, 比你去開一個咒語. 再爬多幾次去開多啲咒語. 你唔可以用喺其他級別到用其他級別嘅代幣.",
+	["bas_9"] = "點樣用超級咒語?",
+	["bas_10"] = "你首先要開曬所有基本咒語先可以用超級咒語. 你唔使解開超級咒語, 但佢哋要用代幣 (唔係法力點) 先用到.",
+	["bas_11"] = "爬多幾次去開曬所有基本咒語. 你可以靠比賽去攞多啲代幣. 你又可以買代幣. 你一開曬所有基本咒語, 撳最左手邊嘅制或撳 'C'",
+	["bas_12"] = "有啲超級咒語係計時, 同唔使跳去用. 喺用之前, 你可以喺 Alignment 公會到睇超級咒語嘅資訊. 取消一個計時咒語係唔會比返啲代幣比你",
+
+	-- ["cla_1"] = "NORMAL TOWER",
+	-- ["cla_2"] = "More alignments!",
+	-- ["cla_3"] = "In the Normal Tower, in addition to Basic Tower alignments, you may also play as Gremlin, Splicer, Archon, Reaver, Heretic or even as a Muggle with no spells.",
+	-- ["cla_4"] = "Those alignments are significantly harder to master than Basic Tower classes, and you may encounter more Crazy Stairs in this tower.",
+	-- ["cla_5"] = "Be aware of the Architects!",
+	-- ["cla_6"] = "Unlike Basic Tower, Normal Tower includes both VR and game pass Architects.",
+	-- ["cla_7"] = "Architect is a special alignment, with an ability to fly. Architects have unlimited Mana and can be a help or a nuisance to other players. Architects are banned from Basic Tower only.",
+	-- ["cla_8"] = "Encountering an Architect may be a blessing or a curse, and succesfully dodging Architect will require a maximum knowledge and practice of your preffered alignment skills.",
+	-- ["cla_9"] = "Events and Rigs!",
+	-- ["cla_10"] = "In the Normal Tower players are allowed to cast Ulitmate Events and Rigs.",
+	-- ["cla_11"] = "Unlike Basic Tower, all your Ultimate spells are unlocked. You may cast Events that affect the whole staicase, or Rigs that will enchant all stairs with your chosen alignment spell.",
+	-- ["cla_12"] = "Normal Tower will not be restored periodically, like Basic Tower, and it is up to the players to decide if they want messy staircase or not.",
+
+	["cla_1"] = "普通塔",
+	["cla_2"] = "更多 Alignments!",
+	["cla_3"] = "喺普通塔, 除咗初級塔嘅 Alignments, 你仲可以用 Gremlin, Splicer, Archon, Reaver, Heretic, 甚至冇咒語嘅 Muggle.",
+	["cla_4"] = "依啲 Alignments 係會比初級塔嘅 Alignments 更加難去精通, 你又可能喺到遇到更加瘋狂樓梯.",
+	["cla_5"] = "睇住啲 Architects!",
+	["cla_6"] = "唔似初級塔, 普通塔會加埋 VR 同 Architects 特權證.",
+	["cla_7"] = "Architect 係一個特別嘅 Alignment, 佢哋可以飛, 有無限法力點. 佢哋可以幫你, 又可以害你. Architect 只係喺初級塔到唔可以用.",
+	["cla_8"] = "遇到 Architect 一係就祝福, 一係就不幸. 要成功避開 Architect 需要有成個遊戲嘅知識同訓練你所揀嘅 Alignment.",
+	["cla_9"] = "突發事件同壟斷事件!",
+	["cla_10"] = "喺普通塔, 玩家可以用超級突發事件咒語同壟斷事件咒語.",
+	["cla_11"] = "唔似初級塔, 你嘅所有超級咒語會解鎖. 你可以用突發事件咒語去影響成個樓梯塔, 或者壟斷事件咒語去用你用緊嘅 Alignment 嘅咒語去升級所有樓梯.",
+	["cla_12"] = "普通塔唔會好似初級塔咁定時恢復, 反而會由玩家決定去要唔要混亂嘅樓梯塔.",
 
 	--[[
 	"PRO TOWER",
@@ -2152,7 +2184,7 @@ module.static = {
 	["pro_9"] = "被詛咒啲交叉點",
 	["pro_10"] = "無人機喺高級塔會隨機建立被詛咒嘅交叉點. 無人機一揾到吉嘅交叉點, 佢會有 20% 機會去詛咒. 指導箭嘴會變成交叉.",
 	["pro_11"] = "被詛咒嘅交叉點會唔比人用任何用喺箭嘴上面嘅平台咒語. 你唔可以建立樓梯, 能量橋或者傳送穿過被詛咒嘅交叉點.",
-	["pro_12"] = "只有 Heretics, Admirals 同無人機可以恢復被詛咒嘅交叉點. Wicked 完全清除會整走全部被詛咒嘅樓梯同交叉點, 但喺自動重生會再建新嘅被詛咒嘅交叉點.",
+	["pro_12"] = "只有 Heretics, Admirals, Architects 同無人機可以恢復被詛咒嘅交叉點. Wicked 完全清除會整走全部被詛咒嘅樓梯同交叉點, 但喺自動重生會再建新嘅被詛咒嘅交叉點.",
 
 	--[[
 	"INFINITE TOWER",
@@ -2174,7 +2206,7 @@ module.static = {
 	["inf_3"] = "喺無限塔一定要玩比賽. 非比賽玩家唔可以用咒語同唔會攞到任何獎勵. 去到個終點球只會比你10個法力點.",
 	["inf_4"] = "去 '完成' 無限塔, 你需要參加比賽再生存得有咁耐就耐. 你會喺淘汰之後有得攞獎勵 (如果有架話).",
 	["inf_5"] = "淪落無人機",
-	["inf_6"] = "唔似喺普通塔同高級塔, 淪落無人機喺無限塔有一個特別嘅任務.",
+	["inf_6"] = "唔似喺初級塔, 普通塔同高級塔, 淪落無人機喺無限塔有一個特別嘅任務.",
 	["inf_7"] = "每隔 '上升時間', 淪落無人機建立新2層. 每雙數層會係有咒語限制. 再加上有啲樓梯同交叉點會被詛咒.",
 	["inf_8"] = "第一個上升時間會維持20秒. 每一次上升會減0.5秒, 直到建立樓層快到啲玩家爬唔切.",
 	["inf_9"] = "移除者",
@@ -2535,6 +2567,7 @@ module.where = {
 	"May affect both below and above stairs.",
 	"Can be executed on either platform's arrows or stairs.",
 	"Can be executed on either platform or stairs.",
+	"Can be executed on platform's arrows or stairs on higher ranks.",
 	"Can be executed anywhere.",
 	"This spell does not require an execution.",
 	]]--
@@ -2546,6 +2579,7 @@ module.where = {
 	["dynamic"] = "有可能會影響下面同上面樓梯.",
 	["both"] = "可以喺平台上面嘅箭嘴或者樓梯上面用.",
 	["both2"] = "可以喺平台上面或者樓梯上面用.",
+	["both3"] = "要更高等級先可以喺平台上面嘅箭嘴或者樓梯上面用",
 	["anywhere"] = "可以喺邊到都用得.",
 	["nowhere"] = "依個咒語唔使跳去用.",
 
@@ -2558,6 +2592,7 @@ module.guide = {
 
 		--[[
 		"Can be executed on an empty intersection or through non-blocking stairs",
+		"Can be executed on an empty intersection or through non-blocking stairs. Rank up to Creator to cast Link in any direction."
 		"Can be executed on an empty intersection, or through crossing stairs. Rank up to Banished to demolish crossing cursed stairs.",
 		--new
 		"Can be executed on an empty intersection, or through crossing stairs. Rank up to Lich to demolish crossing cursed stairs.",
@@ -2568,13 +2603,16 @@ module.guide = {
 		"Can be executed on an empty intersection, or through un-cursed crossing stairs.",
 		"Can be executed on an empty intersection, or through un-cursed crossing stairs on higher ranks.",
 		"Can be executed on an empty intersection only.",
+		"Can be executed on an empty intersection. Ranked up Thieves can cast this spell on normal or rigged stairs."
 		"Can be executed on an intersection with normal or rigged crossing stairs only.",
 		"Can be executed on an intersection with any un-cursed crossing stairs only.",
 		"Can be executed on any un-cursed intersection without a Bypass yet.",
 		]]--
 		--Examples of where guides appear
-		--Patron Link, Drifter Surf
+		--Drifter Surf
 		["through"] = "可以喺吉嘅交叉點到用或者穿過唔係阻住嘅樓梯",
+
+		["link"] = "可以喺吉嘅交叉點到用或者穿過唔係阻住嘅樓梯. 等級上升到 Creator 去喺任何方向用能量橋.",
 		--Heretic Create Cursed Stairs
 		["superforced"] = "可以喺吉嘅交叉點或者有穿過阻住嘅樓梯到用. 等級上升到 Banished 去摧毀阻住又被詛咒嘅樓梯.",
 		--new
@@ -2593,6 +2631,9 @@ module.guide = {
 		["halfsoft"] = "可以用喺吉嘅交叉點, 或者喺更高嘅等級去穿過唔係被詛咒又阻住嘅樓梯.",
 		--Most
 		["soft"] = "只可以喺吉嘅交叉點到用.",
+
+		["soft2"] = "可以喺吉嘅交叉點到用. 高等級 Thieves 可以用依個咒語用喺普通樓梯同 Rig (壟斷樓梯)",
+
 		--Opposite Stairs
 		["flatten"] = "可以喺一個有阻住嘅普通樓梯或者 Rig (壟斷樓梯) 嘅交叉點到用.",
 		--Hack In
@@ -2666,6 +2707,7 @@ module.guide = {
 		["oneway"] = "只可以用喺普通樓梯, Rig (壟斷樓梯).",
 		["revolve"] = "只可以用喺普通樓梯, Rig (壟斷樓梯).",
 		["normalrig"] = "只可以用喺普通樓梯, Rig (壟斷樓梯).",
+		["corkscrew"] = "只可以用喺普通樓梯, Rig (壟斷樓梯).",
 
 	},
 
@@ -2761,6 +2803,13 @@ module.guide = {
 
 		["archgremlin"] = "Gremlin 旋轉平台 (用喺平台) 或者 迴轉樓梯 (用喺樓梯)",
 		["archdrifter"] = "Drifter 𨋢 (用喺平台) 或者 隨機漂移樓梯 (用喺樓梯)",
+	},
+
+	['both3'] = {
+
+		--"Can be executed on an empty intersection only. Rank up to cast this spell on Normal or Rigged stairs too."
+
+		["soft2"] = "只可以喺吉嘅交叉點到用. 等級上升去用依個咒語用喺普通樓梯同 Rig (壟斷樓梯)"
 	},
 
 	['anywhere'] = {
@@ -2903,6 +2952,9 @@ module.serverfeedback = {
 	["transformer"] = "等級上升到 Transformer 去扭曲連接已經扭曲咗嘅樓梯.",
 	["strider"] = "等級上升到 Strider 去雙重上升昇降機.",
 	["lich"] = "等級上升到 Lich 去摧毀阻住又被詛咒嘅樓梯.",
+	["creator"] = "等級上升到 Creator 去喺任何方向建立能量橋.",
+	["protector"] = "等級上升到 Protector 去重建任何唔係被詛咒嘅樓梯.",
+	["robber"] = "等級上升到 Robber 去喺樓梯上用依個咒語.",
 
 	--rig activation
 	["keeperrig"] = "樓梯喐緊!",
@@ -3040,7 +3092,7 @@ module.serverfeedback = {
 	["init"] = "無限模式預設上升時間改變咗",
 	["reduction"] = "無限模式減上升時間改變咗",
 	["mininf"] = "最細上升時間改變咗",
-	["cooldown"] = "壟斷事件同特發事件冷卻時間改變咗",
+	["cooldown"] = "壟斷事件同突發事件冷卻時間改變咗",
 	["speed"] = "細無人機移動速度改變咗",
 	["spin"] = "細無人機用咒語速度改變咗",
 	["max"] = "最多樓梯量改變咗",
@@ -3094,7 +3146,7 @@ module.localfeedback = {
 	["unlocked"] = "咒語解鎖咗!",
 	["maxmana"] = "你已經滿咗法力點!",
 	["nopurchase"] = "你唔需要喺教學買法力點!",
-	["notinbasic"] = "唔可以喺初級塔到用特發事件咒語",
+	["notinbasic"] = "唔可以喺初級塔到用突發事件咒語",
 	--NEW 
 	["limitset"] = "你開咗法力點限制 - 阻止咗你去買.", --for refill mana
 	["hasarchitect"] = "你已經有 Architect 特權證!",
@@ -3133,7 +3185,7 @@ module.switchon = {
 	["DRIFTER1"] = "你唔會再觸發下面嘅 Drifter Rigs.",
 	["SPLICER1"] = "你唔會再觸發下面嘅 Splicer Rigs.",
 	--["REAVER1"] = "You will no longer trigger below Reaver Rigs.", --removed
-	["GREMLIN1"] = "附近嘅螺絲形樓梯唔會喐.",
+	--["GREMLIN1"] = "附近嘅螺絲形樓梯唔會喐.", --removed
 	["NONE"] = "所有特殊效果唔會影你.",
 
 }
@@ -3150,7 +3202,7 @@ module.switchoff = {
 	["DRIFTER1"] = "你會觸發下面嘅 Drifter Rigs.",
 	["SPLICER1"] = "你會觸發下面嘅 Splicer Rigs.",
 	--["REAVER1"] = "You will now trigger below Reaver Rigs.", --removed
-	["GREMLIN1"] = "附近嘅螺絲形樓梯會喐.",
+	--["GREMLIN1"] = "附近嘅螺絲形樓梯會喐.", --removed
 	["NONE"] = "所有特殊效果會影你.",
 }
 --END NEW
