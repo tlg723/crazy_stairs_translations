@@ -322,6 +322,9 @@ module.gui.questions = {
 	--You have received %s Game Pass, courtesy of %s!
 	["received"] = "你得到 %s 特權證, 由 %s 送出!",
 
+	--You need to complete at least %d climbs to be able to teleport to other towers.
+	["notenough"] = "你致少要有 %d 攀爬次數先可以傳送去其他樓梯塔.",
+	
 	--Gamepasses
 	["architect"] = "Architect",
 	["mana"] = "+10 法力點容量",
@@ -2103,6 +2106,7 @@ module.gui.gameover.credits = {
 	["ghost"] = "鬼聯合音樂",
 	["disco"] = "Disco 樓梯音樂",
 	["elevator"] = "漂移平台音樂", --drifter platforms
+	["crazies"] = "發神經樓梯音樂", --gremlin crazy stairs music
 	["finish"] = "多謝你玩依隻遊戲!",
 }
 
