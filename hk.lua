@@ -307,6 +307,10 @@ module.gui.questions = {
 	["skip"] = "你想唔想跳咗個教學?",
 	--Do you want the stairs to avoid collisions while moving? If not, any stairs in the way will be destroyed.
 	["reshuffle"] = "你想唔想啲樓梯唔會互相相撞? 如果唔想, 任何阻住嘅樓梯都會被摧毀.",
+	--"%s alignment is not available in the Basic Tower. Would you like to teleport to the Normal Tower?"
+	["tonormal"] = "%s 唔可以喺初級塔到用. 你想唔想傳送到去普通塔?",
+	--"Are you sure you want to join the race? You will be teleported to the bottom of the tower."
+	["raceconfirm"] = "你係咪想加入比賽? 你會被傳送到去座塔嘅最底.",
 
 	--new
 	--Do you want to gift %s Game Pass to another player?
