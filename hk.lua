@@ -918,8 +918,8 @@ module.spells.descriptions = {
 	--Flatland
 	["thiefevent"] = event .. "平地樓梯咒語" .. event2,
 	--Mega Bypass
-	--This is an Event spell. It will create bypass in each inward north and south intersection. If the intersection is cursed, bypass will not be created.
-	["thiefaltevent"] = "依個係突發事件咒語. 佢會向北同南建立繞道. 如果個交叉點係被詛咒, 繞道唔會被建立.",
+	-- This is an Event spell. It will create bypasses in every intersection at the edge of the staircase. If the intersection is cursed, bypass will not be created.
+	["thiefaltevent"] = "依個係突發事件咒語. 佢會喺所有交叉點側邊嘅平台嘅角落頭到建立繞道. 如果個交叉點係被詛咒, 繞道唔會被建立.",
 	["thiefmode"] = string.format(mode,"Thief","Thief Rig","偷走樓梯咒語或放走樓梯咒語"),
 	["thiefrefill"] = overload,
 	["thiefunion"] = union,
