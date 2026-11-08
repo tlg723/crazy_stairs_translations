@@ -1528,8 +1528,8 @@ module.gui.settings = {
 	--Show direction selection for Gremlin, when using the revolve platform spell and the crazy stairs spell
 	["GChoices"] = "喺用旋轉平台咒語或發神經樓梯咒語果陣顯示方向選擇比 Gremlin",
 	--new
-	--Show direction selection for Chameleon, when using the One-Way Stairs spell
-	["CChoices"] = "喺用單向樓梯咒語果陣顯示方向選擇比 Chameleon",
+	--Show direction selection for Chameleon, when using the One-Way Stairs spell and the corkscrew stairs spell
+	["CChoices"] = "喺用單向樓梯咒語或螺絲形樓梯咒語果陣顯示方向選擇比 Chameleon",
 	--endnew
 
 	--Show animated playerlist rather than standard Roblox Leaderboard
